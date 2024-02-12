@@ -63,13 +63,6 @@ This step involves creating an intermediate image by highlighting facial charact
 
 ### Working Output
 
-![Alt Text]([image_url](https://github.com/KunalSaxena22/Face-Recognition-Attendance-Application/blob/master/projects%20working%20image/pic1.png))
-![Alt Text]([image_url](https://github.com/KunalSaxena22/Face-Recognition-Attendance-Application/blob/master/projects%20working%20image/pic2.png))
-![Alt Text]([image_url](https://github.com/KunalSaxena22/Face-Recognition-Attendance-Application/blob/master/projects%20working%20image/pic3.png))
-![Alt Text]([image_url](https://github.com/KunalSaxena22/Face-Recognition-Attendance-Application/blob/master/projects%20working%20image/pic4.png))
-![Alt Text]([image_url](https://github.com/KunalSaxena22/Face-Recognition-Attendance-Application/blob/master/projects%20working%20image/pic5.png))
-![Alt Text]([image_url](https://github.com/KunalSaxena22/Face-Recognition-Attendance-Application/blob/master/projects%20working%20image/pic4.png))
-![Alt Text]([image_url](https://github.com/KunalSaxena22/Face-Recognition-Attendance-Application/blob/master/projects%20working%20image/pic6.png))
-![Alt Text](image_url)
-![Alt Text](image_url)
+![Face Recognition Attendance System](https://github.com/KunalSaxena22/Face-Recognition-Attendance-Application/blob/master/projects%20working%20image/pic1.png)
+
 
