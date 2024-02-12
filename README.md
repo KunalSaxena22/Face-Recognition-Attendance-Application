@@ -98,7 +98,7 @@ This step involves creating an intermediate image by highlighting facial charact
   </tr>
   <tr>
     <td colspan="2">
-      <img src="https://github.com/KunalSaxena22/Face-Recognition-Attendance-Application/blob/master/projects%20working%20image/pic9.png" alt="Alt Text 1" style="width: 100%;">
+      <img src="https://github.com/KunalSaxena22/Face-Recognition-Attendance-Application/blob/master/projects%20working%20image/pic9.png" alt="Alt Text 1" style="width: 25%;">
     </td>
   </tr>
 </table>
