@@ -72,45 +72,36 @@ This step involves creating an intermediate image by highlighting facial charact
       <img src="https://github.com/KunalSaxena22/Face-Recognition-Attendance-Application/blob/master/projects%20working%20image/pic2.png" alt="Alt Text 2" style="width: 100%;">
     </td>
   </tr>
-</table>
-
-
-<table>
   <tr>
     <td>
-      <img src="https://github.com/KunalSaxena22/Face-Recognition-Attendance-Application/blob/master/projects%20working%20image/pic1.png" alt="Alt Text 1" style="width: 100%;">
+      <img src="https://github.com/KunalSaxena22/Face-Recognition-Attendance-Application/blob/master/projects%20working%20image/pic3.png" alt="Alt Text 1" style="width: 100%;">
     </td>
     <td>
-      <img src="https://github.com/KunalSaxena22/Face-Recognition-Attendance-Application/blob/master/projects%20working%20image/pic2.png" alt="Alt Text 2" style="width: 100%;">
-    </td>
-    <td>
-      <img src="https://github.com/KunalSaxena22/Face-Recognition-Attendance-Application/blob/master/projects%20working%20image/pic3.png" alt="Alt Text 3" style="width: 100%;">
+      <img src="https://github.com/KunalSaxena22/Face-Recognition-Attendance-Application/blob/master/projects%20working%20image/pic4.png" alt="Alt Text 2" style="width: 100%;">
     </td>
   </tr>
   <tr>
     <td>
-      <img src="https://github.com/KunalSaxena22/Face-Recognition-Attendance-Application/blob/master/projects%20working%20image/pic4.png" alt="Alt Text 4" style="width: 100%;">
+      <img src="https://github.com/KunalSaxena22/Face-Recognition-Attendance-Application/blob/master/projects%20working%20image/pic5.png" alt="Alt Text 1" style="width: 100%;">
     </td>
     <td>
-      <img src="https://github.com/KunalSaxena22/Face-Recognition-Attendance-Application/blob/master/projects%20working%20image/pic5.png" alt="Alt Text 5" style="width: 100%;">
-    </td>
-    <td>
-      <img src="https://github.com/KunalSaxena22/Face-Recognition-Attendance-Application/blob/master/projects%20working%20image/pic6.png" alt="Alt Text 6" style="width: 100%;">
+      <img src="https://github.com/KunalSaxena22/Face-Recognition-Attendance-Application/blob/master/projects%20working%20image/pic6.png" alt="Alt Text 2" style="width: 100%;">
     </td>
   </tr>
   <tr>
     <td>
-      <img src="https://github.com/KunalSaxena22/Face-Recognition-Attendance-Application/blob/master/projects%20working%20image/pic7.png" alt="Alt Text 7" style="width: 100%;">
+      <img src="https://github.com/KunalSaxena22/Face-Recognition-Attendance-Application/blob/master/projects%20working%20image/pic7.png" alt="Alt Text 1" style="width: 100%;">
     </td>
     <td>
-      <img src="https://github.com/KunalSaxena22/Face-Recognition-Attendance-Application/blob/master/projects%20working%20image/pic8.png" alt="Alt Text 8" style="width: 100%;">
+      <img src="https://github.com/KunalSaxena22/Face-Recognition-Attendance-Application/blob/master/projects%20working%20image/pic8.png" alt="Alt Text 2" style="width: 100%;">
     </td>
-    <td>
-      <img src="https://github.com/KunalSaxena22/Face-Recognition-Attendance-Application/blob/master/projects%20working%20image/pic9.png" alt="Alt Text 9" style="width: 100%;">
+  </tr>
+  <tr>
+    <td colspan="2">
+      <img src="https://github.com/KunalSaxena22/Face-Recognition-Attendance-Application/blob/master/projects%20working%20image/pic9.png" alt="Alt Text 1" style="width: 100%;">
     </td>
   </tr>
 </table>
-
 
 
 
