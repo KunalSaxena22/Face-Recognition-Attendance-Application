@@ -59,3 +59,17 @@ This step involves creating an intermediate image by highlighting facial charact
 **OpenCV**: Utilized OpenCV 3, a versatile library for image processing with functions including gradient computation, contour detection, Hough transforms, histogram operations, segmentation, filtering, face detection, interest point detection, video processing, and photography. Installation involved copying a script to the Raspberry Pi directory and executing it via terminal commands.
 
 **Python IDE**: Employed Spyder, a feature-rich Python Integrated Development Environment (IDE) for code development. Spyder was chosen for its rich feature set and lightweight nature compared to alternatives like PyCharm. Installation was done via command line.
+
+
+### Working Output
+
+![Alt Text]([image_url](https://github.com/KunalSaxena22/Face-Recognition-Attendance-Application/blob/master/projects%20working%20image/pic1.png))
+![Alt Text]([image_url](https://github.com/KunalSaxena22/Face-Recognition-Attendance-Application/blob/master/projects%20working%20image/pic2.png))
+![Alt Text]([image_url](https://github.com/KunalSaxena22/Face-Recognition-Attendance-Application/blob/master/projects%20working%20image/pic3.png))
+![Alt Text]([image_url](https://github.com/KunalSaxena22/Face-Recognition-Attendance-Application/blob/master/projects%20working%20image/pic4.png))
+![Alt Text]([image_url](https://github.com/KunalSaxena22/Face-Recognition-Attendance-Application/blob/master/projects%20working%20image/pic5.png))
+![Alt Text]([image_url](https://github.com/KunalSaxena22/Face-Recognition-Attendance-Application/blob/master/projects%20working%20image/pic4.png))
+![Alt Text]([image_url](https://github.com/KunalSaxena22/Face-Recognition-Attendance-Application/blob/master/projects%20working%20image/pic6.png))
+![Alt Text](image_url)
+![Alt Text](image_url)
+
