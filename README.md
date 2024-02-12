@@ -63,6 +63,11 @@ This step involves creating an intermediate image by highlighting facial charact
 
 ### Working Output
 
-![Face Recognition Attendance System](https://github.com/KunalSaxena22/Face-Recognition-Attendance-Application/blob/master/projects%20working%20image/pic1.png)
+<div style="display: flex;">
+    <img src="https://github.com/KunalSaxena22/Face-Recognition-Attendance-Application/blob/master/projects%20working%20image/pic1.png" alt="Alt Text 1" style="width: 50%;">
+    <img src="https://github.com/KunalSaxena22/Face-Recognition-Attendance-Application/blob/master/projects%20working%20image/pic2.png" alt="Alt Text 2" style="width: 50%;">
+</div>
+
+
 
 
