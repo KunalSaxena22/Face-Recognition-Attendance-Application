@@ -16,12 +16,13 @@ Traditional methods of marking student attendance pose several challenges. These
 
 ### Aims and Objectives
 
-The objective of this project is to develop face recognition attendance system. Expected 
-achievements in order to fulfill theobjectives are:
- To detect the face segment from the video frame.
- To extract the useful features from the face detected.
- To classify the features in order to recognize the facedetected.
- To record the attendance of the identified student.
+
+The objective of this project is to develop a face recognition attendance system. Expected achievements in order to fulfill the objectives are:
+
+* To detect the face segment from the video frame.
+* To extract the useful features from the face detected.
+* To classify the features in order to recognize the face detected.
+* To record the attendance of the identified student.
 
 ### Student Attendance System
 
@@ -58,10 +59,3 @@ This step involves creating an intermediate image by highlighting facial charact
 **OpenCV**: Utilized OpenCV 3, a versatile library for image processing with functions including gradient computation, contour detection, Hough transforms, histogram operations, segmentation, filtering, face detection, interest point detection, video processing, and photography. Installation involved copying a script to the Raspberry Pi directory and executing it via terminal commands.
 
 **Python IDE**: Employed Spyder, a feature-rich Python Integrated Development Environment (IDE) for code development. Spyder was chosen for its rich feature set and lightweight nature compared to alternatives like PyCharm. Installation was done via command line.
-
-## Documentation
-
-[Connect me on LinkedIn](https://www.linkedin.com/in/kunal-saxena-engineer/)
-
-
-
