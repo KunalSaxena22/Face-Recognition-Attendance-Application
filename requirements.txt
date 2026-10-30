@@ -1,4 +1,4 @@
-# AttendVision / AttendX - tested Python 3.10 dependency baseline
+# AttendVision / AttendX - pinned Python 3.10 dependency baseline
 # Install this file in a clean virtual environment.
 # opencv-contrib-python provides cv2.face.LBPHFaceRecognizer_create().
 # Do not install opencv-python alongside opencv-contrib-python.
