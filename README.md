@@ -48,10 +48,10 @@ The recognition decision uses a threshold derived from the LBPH prediction dista
 - Windows desktop environment.
 - Python 3.10 is the compatibility baseline reflected by the CPython 3.10 binary files currently included in this repository. Other Python versions have not been verified.
 - Webcam for face capture, camera checking, and attendance recognition.
-- Python packages: **opencv-contrib-python**, **numpy**, **Pillow**, **pandas**, and **openpyxl**.
+- Python dependencies are pinned in `requirements.txt`.
 - Tkinter, normally included with the standard Windows Python distribution.
 
-The project does not currently contain a pinned requirements file, so exact dependency versions are not declared. The OpenCV contrib distribution is required for the cv2.face LBPH recognizer. Do not install opencv-python alongside opencv-contrib-python in the same environment because both provide the cv2 package.
+The OpenCV contrib distribution is required for the `cv2.face` LBPH recognizer. Install only `opencv-contrib-python`; do not install `opencv-python` alongside it because both distributions provide the `cv2` package.
 
 ## Setup and run
 
@@ -62,16 +62,18 @@ git clone https://github.com/KunalSaxena22/Face-Recognition-Attendance-Applicati
 cd Face-Recognition-Attendance-Application
 ~~~
 
-Use a Python environment compatible with the listed packages. If the required packages are already installed in your existing environment, do not reinstall them. For a fresh compatible environment, install the packages with:
+Create a Python 3.10 virtual environment and install the pinned dependency set. These commands call the virtual environment's Python executable directly, so activation is not required:
 
 ~~~powershell
-python -m pip install opencv-contrib-python numpy Pillow pandas openpyxl
+py -3.10 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install --upgrade pip
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
 ~~~
 
 Start the application from the repository root:
 
 ~~~powershell
-python main.py
+.\.venv\Scripts\python.exe main.py
 ~~~
 
 On the login screen, choose **Create New Account** to register the first administrator, then sign in.
