@@ -62,7 +62,7 @@ git clone https://github.com/KunalSaxena22/Face-Recognition-Attendance-Applicati
 cd Face-Recognition-Attendance-Application
 ~~~
 
-Create a Python 3.10 virtual environment and install the tested dependency set. These commands call the virtual environment's Python executable directly, so activation is not required:
+Create a Python 3.10 virtual environment and install the pinned dependency set. These commands call the virtual environment's Python executable directly, so activation is not required:
 
 ~~~powershell
 py -3.10 -m venv .venv
