@@ -106,7 +106,9 @@ The email feature connects to Gmail using SMTP over SSL on port 465. It asks for
 
 ## License
 
-There is currently no LICENSE file in this repository. Until the copyright holder adds a license, users should not assume the code is offered under an OSI-approved open-source license or that reuse and redistribution are permitted. Add a license only after confirming the rights to license all included code and assets.
+The original AttendVision application source code authored by the project maintainer is licensed under the [MIT License](LICENSE).
+
+This license does not replace or relicense third-party dependencies, bundled Python packages, external libraries, or assets whose rights belong to other authors. Those components remain subject to their own copyright notices and license terms. Check the applicable license before redistributing any third-party component or asset.
 
 ## Contributing
 
