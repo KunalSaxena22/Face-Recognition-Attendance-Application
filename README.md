@@ -1,107 +1,118 @@
+# AttendVision — AttendX Face Recognition Attendance System
 
-# Face Recognition Attendance Application
+AttendVision (the desktop application is titled **AttendX – Next-Gen Attendance System**) is a Python desktop project for student registration, webcam face-sample capture, LBPH model training, attendance recording, dashboard summaries, and attendance email notifications.
 
-### Abstract
+It is built for learning and demonstration with Python, Tkinter, OpenCV, and local CSV, JSON, and Excel files.
 
-In this project, we're using individuals' faces to automatically mark attendance, which is crucial for schools and colleges. Instead of the traditional method of calling out names or roll numbers, which takes time, we're employing image processing techniques like face detection and recognition. This means locating faces in images and matching them with stored faces in a database to mark attendance efficiently.
+> **Project status:** This is a learning/demo application, not a production-ready biometric or student-information system. Read the security and privacy notes before using real student data.
 
+## Features
 
-### Introduction
+- **Administrator registration and login** through the desktop interface.
+- **Student registration** with student ID, name, roll number, and email address, including duplicate-ID checks.
+- **Face sample capture** using a webcam and Haar Cascade face detection.
+- **Model training** using OpenCV Local Binary Patterns Histograms (LBPH). The model is saved in the TrainingImage folder as Trainner.yml.
+- **Attendance recognition** using the trained LBPH model, recording a recognized student once per session.
+- **Excel attendance reports** with student ID, name, date, and time.
+- **Dashboard** showing student totals, present/absent counts, attendance percentage, and recent records.
+- **Camera check** for webcam access and face detection.
+- **Email notifications** for present/absent status using Gmail SMTP.
 
-Attendance is crucial for both teachers and students in educational institutions. Traditional methods of taking attendance, like calling out names or roll numbers, are time-consuming and energy-draining. Automatic attendance systems like biometric and RFID have been introduced but still face time constraints and queues. This project presents an automatic attendance system that seamlessly integrates with teaching processes. It eliminates the need for manual identification methods and can be implemented during exams or other teaching activities. Students can easily enroll in the system through a user-friendly interface, avoiding unnecessary stress and disruption.
+## Technology
 
-### Problem Statement
+| Area | Technology |
+|---|---|
+| Language and desktop UI | Python, Tkinter |
+| Face detection | OpenCV Haar Cascade |
+| Face recognition | OpenCV LBPH (cv2.face) |
+| Image processing | OpenCV, NumPy, Pillow |
+| Student records | CSV |
+| Administrator data | JSON |
+| Attendance reports | Pandas, Excel (.xlsx), OpenPyXL |
+| Email | smtplib, Gmail SMTP over SSL |
 
-Traditional methods of marking student attendance pose several challenges. These include disruptions to the teaching process, distractions during exams, and difficulties in managing attendance sheets in large classes. The proposed face recognition attendance system aims to simplify attendance tracking by eliminating manual methods like calling names or passing around attendance sheets. It also addresses issues like fraudulent attendance and eliminates the need for manual counting by instructors.
+## How it works
 
-### Aims and Objectives
+1. Start the application and create an administrator account.
+2. Sign in and register students.
+3. Capture face samples for each student using the webcam.
+4. Train the LBPH recognition model from the captured samples.
+5. Start an attendance session. The application detects faces, predicts a student ID, and records each recognized student once in that session.
+6. Press **Q** to close the attendance camera. When attendance was recorded, an Excel report is saved in the Attendance folder.
+7. Review the dashboard and use email notifications only with appropriate test data until the privacy issue described below is addressed.
 
+The recognition decision uses a threshold derived from the LBPH prediction distance. The displayed percentage is an application-specific score; it is **not** a scientifically measured recognition-accuracy rate.
 
-The objective of this project is to develop a face recognition attendance system. Expected achievements in order to fulfill the objectives are:
+## Requirements
 
-* To detect the face segment from the video frame.
-* To extract the useful features from the face detected.
-* To classify the features in order to recognize the face detected.
-* To record the attendance of the identified student.
+- Windows desktop environment.
+- Python 3.10 is the compatibility baseline reflected by the CPython 3.10 binary files currently included in this repository. Other Python versions have not been verified.
+- Webcam for face capture, camera checking, and attendance recognition.
+- Python packages: **opencv-contrib-python**, **numpy**, **Pillow**, **pandas**, and **openpyxl**.
+- Tkinter, normally included with the standard Windows Python distribution.
 
-### Student Attendance System
+The project does not currently contain a pinned requirements file, so exact dependency versions are not declared. The OpenCV contrib distribution is required for the cv2.face LBPH recognizer. Do not install opencv-python alongside opencv-contrib-python in the same environment because both provide the cv2 package.
 
-Arun Katara et al. (2017) discussed the drawbacks of various biometric systems like RFID cards, fingerprints, iris recognition, and voice recognition. While RFID cards are simple, they're prone to fraudulent use. Fingerprint systems are accurate but slow, causing queues during verification. Iris recognition, though accurate, raises privacy concerns due to detailed data collection. Voice recognition, while available, is less accurate. Hence, face recognition emerges as a preferred option for student attendance systems.
+## Setup and run
 
-### Digital Image Processing
+Clone the repository:
 
-Digital Image Processing involves manipulating digital images for human perception, efficient storage, and machine applications. It revolves around improving pictorial information, storage, transmission, and autonomous machine usage.
+~~~powershell
+git clone https://github.com/KunalSaxena22/Face-Recognition-Attendance-Application.git
+cd Face-Recognition-Attendance-Application
+~~~
 
-### Image Representation in a Digital Computer
+Use a Python environment compatible with the listed packages. If the required packages are already installed in your existing environment, do not reinstall them. For a fresh compatible environment, install the packages with:
 
-Images are represented as 2D light intensity functions. They're discretized into grids and quantized for brightness levels, forming matrices of pixels or pels. Typical images are sized 256x256 or 1024x1024 pixels, quantized to 8 or 24 bits for black-and-white or colored images respectively.
+~~~powershell
+python -m pip install opencv-contrib-python numpy Pillow pandas openpyxl
+~~~
 
-### Steps in Digital Image Processing
+Start the application from the repository root:
 
-Digital image processing comprises acquiring images through sensors, preprocessing to enhance quality, segmentation to identify object parts, selecting features for computer processing, recognition and interpretation of objects, and maintaining a knowledge base for efficient processing and inter-module cooperation.
+~~~powershell
+python main.py
+~~~
 
-### Local Binary Patterns Histogram
+On the login screen, choose **Create New Account** to register the first administrator, then sign in.
 
-Local Binary Pattern (LBP) is a straightforward yet effective texture operator used for labeling image pixels based on the surrounding pixel values. It was introduced in 1994 and is widely used for texture classification. Combining LBP with Histograms of Oriented Gradients (HOG) has shown significant improvements in detection performance. By using LBP with histograms, we can represent face images with a simple data vector.
+## Data and generated files
 
-### LBPH Algorithm Overview
-#### Parameters:
-Radius: Determines the size of the circular local binary pattern around each pixel.
-Neighbors: Defines the number of sample points used to construct the pattern.
-Grid X and Grid Y: Determine the number of cells in the horizontal and vertical directions, respectively, for grid division.
-#### Training the Algorithm:
-The algorithm is trained using a dataset containing facial images and corresponding IDs for recognition.
-#### Applying the LBP Operation:
-This step involves creating an intermediate image by highlighting facial characteristics using a sliding window approach based on the defined parameters.
+The application creates or uses these paths relative to the project directory:
 
-### Design Requirements
-#### Software Implementation
-**OpenCV**: Utilized OpenCV 3, a versatile library for image processing with functions including gradient computation, contour detection, Hough transforms, histogram operations, segmentation, filtering, face detection, interest point detection, video processing, and photography. Installation involved copying a script to the Raspberry Pi directory and executing it via terminal commands.
+| Path | Purpose |
+|---|---|
+| StudentDetails/NewRegisterInfo.json | Administrator account data |
+| StudentDetails/StudentDetails.csv | Registered student details |
+| TrainingImage/ | Captured face samples |
+| TrainingImage/Trainner.yml | Trained LBPH model |
+| Attendance/ | Generated attendance Excel reports |
+| haarcascade_frontalface_default.xml | Haar Cascade face detector |
 
-**Python IDE**: Employed Spyder, a feature-rich Python Integrated Development Environment (IDE) for code development. Spyder was chosen for its rich feature set and lightweight nature compared to alternatives like PyCharm. Installation was done via command line.
+Do not commit real student data, captured face images, trained models derived from real people, credentials, or attendance reports to a public repository.
 
+## Email and privacy warning
 
-### Working Output
+The email feature connects to Gmail using SMTP over SSL on port 465. It asks for a sender email address and password/App Password at runtime. Never commit credentials to Git or place them in source code.
 
-<table>
-  <tr>
-    <td>
-      <img src="https://github.com/KunalSaxena22/Face-Recognition-Attendance-Application/blob/master/projects%20working%20image/pic1.png" alt="Alt Text 1" style="width: 100%;">
-    </td>
-    <td>
-      <img src="https://github.com/KunalSaxena22/Face-Recognition-Attendance-Application/blob/master/projects%20working%20image/pic2.png" alt="Alt Text 2" style="width: 100%;">
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <img src="https://github.com/KunalSaxena22/Face-Recognition-Attendance-Application/blob/master/projects%20working%20image/pic3.png" alt="Alt Text 1" style="width: 100%;">
-    </td>
-    <td>
-      <img src="https://github.com/KunalSaxena22/Face-Recognition-Attendance-Application/blob/master/projects%20working%20image/pic4.png" alt="Alt Text 2" style="width: 100%;">
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <img src="https://github.com/KunalSaxena22/Face-Recognition-Attendance-Application/blob/master/projects%20working%20image/pic5.png" alt="Alt Text 1" style="width: 100%;">
-    </td>
-    <td>
-      <img src="https://github.com/KunalSaxena22/Face-Recognition-Attendance-Application/blob/master/projects%20working%20image/pic6.png" alt="Alt Text 2" style="width: 100%;">
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <img src="https://github.com/KunalSaxena22/Face-Recognition-Attendance-Application/blob/master/projects%20working%20image/pic7.png" alt="Alt Text 1" style="width: 100%;">
-    </td>
-    <td>
-      <img src="https://github.com/KunalSaxena22/Face-Recognition-Attendance-Application/blob/master/projects%20working%20image/pic8.png" alt="Alt Text 2" style="width: 100%;">
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2">
-      <img src="https://github.com/KunalSaxena22/Face-Recognition-Attendance-Application/blob/master/projects%20working%20image/pic9.png" alt="Alt Text 1" style="width: 100%;">
-    </td>
-  </tr>
-</table>
+**Important:** The current email implementation attaches the selected attendance Excel workbook to each student's email. The workbook may contain records for multiple students. Do not use this feature with real student records until the attachment behavior is changed or reviewed to prevent disclosure.
 
+## Security, privacy, and limitations
 
+- **Plain-text administrator passwords:** passwords are currently stored and checked in StudentDetails/NewRegisterInfo.json as plain text. This is not suitable for accounts protecting real or sensitive information.
+- **Biometric and student information:** face images, student details, model files, and attendance reports can be sensitive personal data. Obtain appropriate consent and institutional approval, restrict access, and define retention and deletion practices before real-world use.
+- **Recognition limitations:** lighting, camera quality, pose, image quality, and training samples can affect recognition. The displayed score is not a guarantee of identity or a measured accuracy metric. Attendance should have a manual review/correction process.
+- **Demo status:** the local JSON/CSV/Excel storage and current authentication design have not been presented as a secure institutional deployment.
 
+## License
+
+There is currently no LICENSE file in this repository. Until the copyright holder adds a license, users should not assume the code is offered under an OSI-approved open-source license or that reuse and redistribution are permitted. Add a license only after confirming the rights to license all included code and assets.
+
+## Contributing
+
+Bug reports, reproducible issue descriptions, documentation improvements, and tested pull requests are welcome. Do not include real student information, face images, credentials, or attendance exports in issues or pull requests. Describe the problem, the change, and the steps used to test it.
+
+## Maintainer
+
+**Kunal Saxena**  
+GitHub: [@KunalSaxena22](https://github.com/KunalSaxena22)
